@@ -96,7 +96,11 @@ class MenuItemListViewController: UIViewController {
             controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
-    
+ 
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: animated)
+    }
 }
 
 extension MenuItemListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -143,6 +147,14 @@ extension MenuItemListViewController: UITableViewDelegate, UITableViewDataSource
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
+    }
+
+    func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        super.setEditing(true, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        super.setEditing(false, animated: true)
     }
 
 }
