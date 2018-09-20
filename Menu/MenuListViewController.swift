@@ -89,7 +89,7 @@ class MenuListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         if let menu = objects?[indexPath.row] {
-            cell.textLabel!.text = menu.created.description
+            cell.textLabel!.text = menu.modified.description
         }
         else {
             cell.textLabel!.text = "XX"

@@ -10,5 +10,6 @@ import Foundation
 import RealmSwift
 
 class MenuHistoryItem: Object {
-    @objc dynamic var item: MenuItem?
+    @objc dynamic var created: Date = Date()
+    @objc dynamic var title: String = ""
 }

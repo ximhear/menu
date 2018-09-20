@@ -17,6 +17,7 @@
 		EC2841B921533B32002BD9B7 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2841B821533B32002BD9B7 /* Menu.swift */; };
 		EC2841BB21533BEB002BD9B7 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2841BA21533BEB002BD9B7 /* MenuItem.swift */; };
 		EC2841BD21533CA4002BD9B7 /* MenuHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2841BC21533CA4002BD9B7 /* MenuHistoryItem.swift */; };
+		EC2841BF2153816E002BD9B7 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2841BE2153816E002BD9B7 /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EC2841B821533B32002BD9B7 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		EC2841BA21533BEB002BD9B7 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		EC2841BC21533CA4002BD9B7 /* MenuHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHistoryItem.swift; sourceTree = "<group>"; };
+		EC2841BE2153816E002BD9B7 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				EC2841B821533B32002BD9B7 /* Menu.swift */,
 				EC2841BA21533BEB002BD9B7 /* MenuItem.swift */,
 				EC2841BC21533CA4002BD9B7 /* MenuHistoryItem.swift */,
+				EC2841BE2153816E002BD9B7 /* HistoryTableViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				EC2841A721533282002BD9B7 /* MenuListViewController.swift in Sources */,
 				EC2841B921533B32002BD9B7 /* Menu.swift in Sources */,
 				EC2841A521533282002BD9B7 /* AppDelegate.swift in Sources */,
+				EC2841BF2153816E002BD9B7 /* HistoryTableViewController.swift in Sources */,
 				EC2841BD21533CA4002BD9B7 /* MenuHistoryItem.swift in Sources */,
 				EC2841BB21533BEB002BD9B7 /* MenuItem.swift in Sources */,
 			);
