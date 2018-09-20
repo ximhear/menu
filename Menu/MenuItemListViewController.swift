@@ -41,14 +41,36 @@ class MenuItemListViewController: UIViewController {
 
     @objc
     func insertNewObject(_ sender: Any) {
+
+        let alert = UIAlertController(title: "Item", message: "Please input text", preferredStyle: UIAlertController.Style.alert)
         
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter item"
+        }
+
+        let add = UIAlertAction(title: "Add", style: .default) { (alertAction) in
+            if let text = alert.textFields?[0].text, text.count > 0 {
+                self.add(title: text)
+            }
+        }
+
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(add)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func add(title: String) {
+
         let count = menu?.items.count ?? 0
         do {
             let realm = try Realm()
             
             try realm.write {
                 let item = MenuItem()
-                item.title = "New - \(Date())"
+                item.title = title
                 menu?.items.append(item)
                 
                 let historyItem = MenuHistoryItem()

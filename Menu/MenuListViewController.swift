@@ -59,6 +59,9 @@ class MenuListViewController: UITableViewController {
 
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
+        
+        tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
     // MARK: - Segues
@@ -89,7 +92,7 @@ class MenuListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         if let menu = objects?[indexPath.row] {
-            cell.textLabel!.text = menu.modified.description
+            cell.textLabel!.text = menu.modified.localFormatString()
         }
         else {
             cell.textLabel!.text = "XX"
@@ -124,3 +127,15 @@ class MenuListViewController: UITableViewController {
 
 }
 
+extension Date {
+    public func localFormatString() -> String {
+        let locale = Locale.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = locale
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        dateFormatter.timeZone = TimeZone.current
+        
+        return dateFormatter.string(from: self)
+    }
+}
